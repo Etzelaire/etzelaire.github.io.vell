@@ -1,7 +1,14 @@
 header {
   background-color: brown;
+  border-bottom: blue solid;
 }
 
 body {
   background-color: aquamarine;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  color: black;
 }
