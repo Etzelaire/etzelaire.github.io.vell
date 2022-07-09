@@ -1,4 +1,7 @@
 header {
+  padding: 20rem, 40rem;
+  margin: 0;
+  width: 100%;
   background-color: brown;
   border-bottom: blue solid;
 }
