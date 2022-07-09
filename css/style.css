@@ -73,6 +73,7 @@
 
 /* SECTION1 */
 .section1 {
+  background-color: antiquewhite;
   padding: 4.8rem 0 3.2rem 0;
 }
 
@@ -84,6 +85,12 @@
   text-align: center;
   margin-bottom: 2.4rem;
   color: rgb(41, 79, 85);
+}
+
+/* SECTION1 */
+.section2 {
+  background-color: rgb(229, 235, 208);
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 /* FOOTER */
@@ -113,7 +120,7 @@
 .copyright {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: rgb(29, 65, 117);
+  color: rgb(16, 19, 24);
   margin-top: auto;
 }
 
@@ -143,6 +150,12 @@
 .footer-link:link,
 .footer-link:visited {
   text-decoration: none;
+  color: #252222;
   font-size: 1.6rem;
   transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: rgb(153, 32, 32);
 }
