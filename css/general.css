@@ -86,3 +86,25 @@ body {
 strong {
   font-weight: 500;
 }
+
+/*BUTTONS*/
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: rgb(214, 158, 85);
+  color: rgb(32, 20, 20);
+}
