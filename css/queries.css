@@ -142,7 +142,6 @@
 
     /* 1) Hide it visually */
     opacity: 0;
-
     /* 2) Make it unaccessible to mouse and keyboard */
     pointer-events: none;
 

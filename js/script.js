@@ -41,17 +41,17 @@ allLinks.forEach(function (link) {
         behavior: "smooth",
       });
 
-    // Scroll to other links
+    //     // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
     // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      headerEl.classList.toggle("nav-open");
-  });
-});
+    // if (link.classList.contains("main-nav-link"))
+      // headerEl.classList.toggle("nav-open");
+  // });
+// });
 
 ///////////////////////////////////////////////////////////
 // Sticky navigation
@@ -99,7 +99,7 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
-
+  
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
@@ -152,3 +152,4 @@ checkFlexGap();
   }
 }
 */
+
