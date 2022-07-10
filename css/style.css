@@ -98,6 +98,10 @@
   padding: 4.8rem 0 3.2rem 0;
 }
 
+.section1 img {
+  width: 80%;
+}
+
 .heading-feature {
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -112,6 +116,10 @@
 .section2 {
   background-color: rgb(229, 235, 208);
   padding: 4.8rem 0 9.6rem 0;
+}
+
+.section2 img {
+  width: 80%;
 }
 
 /* FOOTER */
