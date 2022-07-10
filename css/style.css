@@ -1,5 +1,4 @@
 /* HEADER */
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -94,8 +93,14 @@
 
 /* SECTION1 */
 .section1 {
-  background-color: antiquewhite;
-  padding: 4.8rem 0 3.2rem 0;
+  background-image: url("/img/lazybunnynft.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 15rem 3rem;
+  border-top: 1px solid #ddd;
+
+  transition: transform 1s, opacity 1s;
 }
 
 .section1 img {
@@ -103,7 +108,7 @@
 }
 
 .heading-feature {
-  font-size: 1.4rem;
+  font-size: 3.2rem;
   text-transform: uppercase;
   letter-spacing: 0.75px;
   font-weight: 500;
@@ -111,8 +116,14 @@
   margin-bottom: 2.4rem;
   color: rgb(41, 79, 85);
 }
+.step-number {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+  color: rgb(41, 79, 85);
+}
+/* SECTION2 */
 
-/* SECTION1 */
 .section2 {
   background-color: rgb(229, 235, 208);
   padding: 4.8rem 0 9.6rem 0;

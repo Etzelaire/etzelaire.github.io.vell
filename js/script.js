@@ -1,8 +1,21 @@
-console.log("Hello world!");
+"use strict";
 
-const myName = "Jordi Vargas";
-const h1 = document.querySelector(".heading1");
-console.log(h1);
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".btn--close-modal");
+const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section1");
+const nav = document.querySelector(".nav");
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+
+console.log("A page produced and edited by Etzelaire");
+
+// const myName = "Jordi Vargas";
+// const h1 = document.querySelector(".heading1");
+// console.log(h1);
 
 // h1.addEventListener("click", function () {
 //   h1.textContent = myName;
@@ -25,6 +38,23 @@ btnNavEl.addEventListener("click", function () {
 });
 
 ///////////////////////////////////////////////////////////
+//BUTTON SCROLLING
+btnScrollTo.addEventListener("click", function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log("Current scroll (X/Y)", window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    "height/width viewport",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+  section1.scrollIntoView({ behavior: "smooth" });
+});
+///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 
 const allLinks = document.querySelectorAll("a:link");
@@ -46,110 +76,251 @@ allLinks.forEach(function (link) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
+  });
 
-    // Close mobile naviagtion
-    // if (link.classList.contains("main-nav-link"))
-      // headerEl.classList.toggle("nav-open");
+  // Close mobile naviagtion
+  // if (link.classList.contains("main-nav-link"))
+  // headerEl.classList.toggle("nav-open");
   // });
-// });
+  // });
 
-///////////////////////////////////////////////////////////
-// Sticky navigation
+  ///////////////////////////////////////
+  // Sticky navigation: Intersection Observer API
 
-const sectionHeroEl = document.querySelector(".section-hero");
+  const header = document.querySelector(".header");
+  const navHeight = nav.getBoundingClientRect().height;
 
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    console.log(ent);
+  const stickyNav = function (entries) {
+    const [entry] = entries;
+    // console.log(entry);
 
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
+    if (!entry.isIntersecting) nav.classList.add("sticky");
+    else nav.classList.remove("sticky");
+  };
 
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
+  const headerObserver = new IntersectionObserver(stickyNav, {
     root: null,
     threshold: 0,
-    rootMargin: "-80px",
+    rootMargin: `-${navHeight}px`,
+  });
+
+  headerObserver.observe(header);
+
+  ///////////////////////////////////////oEl);
+
+  ///////////////////////////////////////////////////////////
+  // Fixing flexbox gap property missing in some Safari versions
+  function checkFlexGap() {
+    var flex = document.createElement("div");
+    flex.style.display = "flex";
+    flex.style.flexDirection = "column";
+    flex.style.rowGap = "1px";
+
+    flex.appendChild(document.createElement("div"));
+    flex.appendChild(document.createElement("div"));
+
+    document.body.appendChild(flex);
+    var isSupported = flex.scrollHeight === 1;
+    flex.parentNode.removeChild(flex);
+    console.log(isSupported);
+
+    if (!isSupported) document.body.classList.add("no-flexbox-gap");
   }
-);
-obs.observe(sectionHeroEl);
-
-///////////////////////////////////////////////////////////
-// Fixing flexbox gap property missing in some Safari versions
-function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
-
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
-
-  document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  console.log(isSupported);
-
-  if (!isSupported) document.body.classList.add("no-flexbox-gap");
-}
-checkFlexGap();
-  
+  checkFlexGap();
+});
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
-/*
-.no-flexbox-gap .main-nav-list li:not(:last-child) {
-  margin-right: 4.8rem;
-}
+///////////////////////////////////////
+// Reveal sections
+const allSections = document.querySelectorAll(".section");
 
-.no-flexbox-gap .list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
-}
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
 
-.no-flexbox-gap .list-icon:not(:last-child) {
-  margin-right: 1.6rem;
-}
+  if (!entry.isIntersecting) return;
 
-.no-flexbox-gap .delivered-faces {
-  margin-right: 1.6rem;
-}
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
 
-.no-flexbox-gap .meal-attribute:not(:last-child) {
-  margin-bottom: 2rem;
-}
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
 
-.no-flexbox-gap .meal-icon {
-  margin-right: 1.6rem;
-}
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
 
-.no-flexbox-gap .footer-row div:not(:last-child) {
-  margin-right: 6.4rem;
-}
+//////////////////////////////////////
+// Slider
+const slider = function () {
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
 
-.no-flexbox-gap .social-links li:not(:last-child) {
-  margin-right: 2.4rem;
-}
+  let curSlide = 0;
+  const maxSlide = slides.length;
 
-.no-flexbox-gap .footer-nav li:not(:last-child) {
-  margin-bottom: 2.4rem;
-}
+  // Functions
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"></button>`
+      );
+    });
+  };
 
-@media (max-width: 75em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 3.2rem;
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
+  };
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+    createDots();
+
+    activateDot(0);
+  };
+  init();
+
+  // Event handlers
+  btnRight.addEventListener("click", nextSlide);
+  btnLeft.addEventListener("click", prevSlide);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") prevSlide();
+    e.key === "ArrowRight" && nextSlide();
+  });
+
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+};
+slider();
+
+const imgTargets = document.querySelectorAll("img[data-src]");
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));
+
+// Menu fade animation
+const handleHover = function (e) {
+  if (e.target.classList.contains("nav__link")) {
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+    const logo = link.closest(".nav").querySelector("img");
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
   }
-}
+};
 
-@media (max-width: 59em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 4.8rem;
+// Passing "argument" into handler
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));
+
+// Tabbed component
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".operations__tab");
+
+  // Guard clause
+  if (!clicked) return;
+
+  // Remove active classes
+  tabs.forEach((t) => t.classList.remove("operations__tab--active"));
+  tabsContent.forEach((c) => c.classList.remove("operations__content--active"));
+
+  // Activate tab
+  clicked.classList.add("operations__tab--active");
+
+  // Activate content area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add("operations__content--active");
+});
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
-}
-*/
+});
 
+///////////////////////////////////////
+// Page navigation
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
