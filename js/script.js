@@ -5,7 +5,7 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
 const btnScrollTo = document.querySelector(".btn--scroll-to");
-const section1 = document.querySelector("#section1");
+const section3 = document.querySelector("#section3");
 const nav = document.querySelector(".nav");
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
@@ -40,8 +40,8 @@ btnNavEl.addEventListener("click", function () {
 ///////////////////////////////////////////////////////////
 //BUTTON SCROLLING
 btnScrollTo.addEventListener("click", function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
+  const s3coords = section3.getBoundingClientRect();
+  console.log(s3coords);
 
   console.log(e.target.getBoundingClientRect());
 
@@ -52,7 +52,7 @@ btnScrollTo.addEventListener("click", function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
-  section1.scrollIntoView({ behavior: "smooth" });
+  section3.scrollIntoView({ behavior: "smooth" });
 });
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
