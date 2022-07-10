@@ -94,12 +94,12 @@
 /* SECTION1 */
 .section1 {
   background-image: url("/img/lazybunnynft.png");
-
+  background-color: rgba(54, 50, 50, 0.6);
+  background-blend-mode: lighten;
   background-size: contain;
   background-repeat: no-repeat;
   padding: 15rem 3rem;
   border-top: 1px solid rgb(209, 180, 180);
-
   transition: transform 1s, opacity 1s;
 }
 
