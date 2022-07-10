@@ -44,7 +44,7 @@
   height: 8rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: rgb(114, 24, 24);
+  background-color: rgb(233, 152, 3);
   z-index: 99;
   box-shadow: 0 1.2rem 3.2rem #444;
 }
@@ -98,7 +98,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   padding: 15rem 3rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgb(209, 180, 180);
 
   transition: transform 1s, opacity 1s;
 }
@@ -133,10 +133,22 @@
   width: 80%;
 }
 
+/*SECTION3*/
+.section3 {
+  background-image: url("/img/blockchain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15rem 3rem;
+  border-top: 1px solid rgb(209, 180, 180);
+
+  transition: transform 1s, opacity 1s;
+  opacity: 0.75;
+}
+
 /* FOOTER */
 .footer {
   padding: 12.8rem 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgb(173, 164, 164);
 }
 .grid--footer {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
@@ -197,5 +209,5 @@
 
 .footer-link:hover,
 .footer-link:active {
-  color: rgb(153, 32, 32);
+  color: rgb(233, 152, 3);
 }
