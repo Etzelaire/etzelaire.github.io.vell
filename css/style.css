@@ -85,6 +85,11 @@
   align-items: center;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 4.2rem;
+}
+
 .hero-description {
   font-size: 2rem;
   line-height: 1.6;
