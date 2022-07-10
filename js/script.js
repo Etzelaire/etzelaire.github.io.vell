@@ -1,7 +1,7 @@
 console.log("Hello world!");
 
 const myName = "Jordi Vargas";
-const h1 = document.querySelector(".heading-primary");
+const h1 = document.querySelector(".heading1");
 console.log(h1);
 
 // h1.addEventListener("click", function () {

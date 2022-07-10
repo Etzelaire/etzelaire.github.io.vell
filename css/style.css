@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: azure;
-  border-bottom: blue solid;
 
   /*sticky header */
   height: 9.6rem;
@@ -31,6 +30,7 @@
   color: #444;
   font-weight: 500;
   font-size: 1.8rem;
+  transition: all 0.3s;
 }
 .main-nav-link:hover,
 .main-nav-link:active {
@@ -46,8 +46,29 @@
   padding-top: 0;
   padding-bottom: 0;
   background-color: rgb(114, 24, 24);
-  z-index: 999;
+  z-index: 99;
   box-shadow: 0 1.2rem 3.2rem #444;
+}
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/*MOBILE*/
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #444;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /*HERO SECTION */
