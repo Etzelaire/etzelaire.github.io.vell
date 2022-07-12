@@ -5,6 +5,7 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
 const btnScrollTo = document.querySelector(".btn--scroll-to");
+const btnScrollTo1 = document.querySelector(".btn--scroll-to-1");
 const section3 = document.querySelector("#section3");
 const nav = document.querySelector(".nav");
 const tabs = document.querySelectorAll(".operations__tab");
@@ -40,8 +41,8 @@ btnNavEl.addEventListener("click", function () {
 ///////////////////////////////////////////////////////////
 //BUTTON SCROLLING
 btnScrollTo.addEventListener("click", function (e) {
-  const s3coords = section3.getBoundingClientRect();
-  console.log(s3coords);
+  const s1coords = section3.getBoundingClientRect();
+  console.log(s1coords);
 
   console.log(e.target.getBoundingClientRect());
 
@@ -53,6 +54,22 @@ btnScrollTo.addEventListener("click", function (e) {
     document.documentElement.clientWidth
   );
   section3.scrollIntoView({ behavior: "smooth" });
+});
+///////////////////////////////////////////
+btnScrollTo1.addEventListener("click", function (e) {
+  const s1coords = pricing.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log("Current scroll (X/Y)", window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    "height/width viewport",
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+  pricing.scrollIntoView({ behavior: "smooth" });
 });
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
