@@ -42,24 +42,26 @@
 
   <body>
     <header class="header">
+      <nav class="nav">
       <a href="#">
         <img
           class="logo"
           alt="Etzelaire official logo"
           src="img/lazybunnynft-modified.png"
+          id="logo"
+          designer="Jordi"
+          data-version-number="1.0"
         />
-      </a>
-
-      <nav class="main-nav">
+      </a>      
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#section2">Home</a></li>
-          <li><a class="main-nav-link" href="services.html">Services</a></li>
-          <li><a class="main-nav-link" href="about.html">About</a></li>
-          <!-- <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+          <li class="nav__item"><a class="main-nav-link" href="#">Home</a></li>
+          <li class="nav__item"><a class="main-nav-link" href="#section2">Services</a></li>
+          <li class="nav__item"><a class="main-nav-link" href="#section3">About</a></li>
+          <li class="nav__item">
+            <a class="main-nav-link main-nav-link--btn btn--show-modal" href="#"
               >Sign Up</a
             >
-          </li> -->
+          </li>
         </ul>
       </nav>
 
@@ -70,7 +72,7 @@
     </header>
 
     <main>
-      <section class="section-hero">
+      <section class="section" id="section-hero">
         <div class="hero">
           <div class="hero-textbox">
             <h1 class="heading1">Your video showdown for US sponsorship seamlessly edited </h1>
@@ -79,14 +81,15 @@
             </p>
             <div class="hero-buttons">
             <button class="btn btn--scroll-to-1">See our Plans</button>
-            <button class="btn--text btn--scroll-to">
+            <button class="btn btn--scroll-to">
               Check out some videos &DownArrow;
             </button>
             </div>
           </div>
         </div>
       </section>
-      <section class="section1" id="section1">
+
+      <section class="section" id="section1">
         <div class="container">
           <h2 class="heading-feature">How We Work</h2>
           <p class="hero-description">1. We ask you to fill in a form in which you agree for us to handle your data, contact you and you make the payment with card or paypal</p>
@@ -94,7 +97,7 @@
           <p class="hero-description">3. The resulting video edited in full will be sent back to you</p>
       </section>
 
-      <section class="section2" id="section2 section--hidden">
+      <section class="section" id="section2">
         <div class="container grid grid--2cols grid--center-v">
           <div class="step-textbox">
             <p class="step-number">01</p>
@@ -105,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="section-featured">
+      <section class="section" id="section-featured">
         <div class="container">
           <h2 class="heading-featured-in">Our edition will be useful for any company</h2>
           <div class="logos">
@@ -124,7 +127,7 @@
           </div>
         </div>
       </section>
-      <section class="section3" id="section3">
+      <section class="section" id="section3">
         <div class="container grid grid--2cols grid--center-v">
           <div class="step-textbox">
             <p class="step-number">02</p>
@@ -245,7 +248,7 @@
         <div class="dots"></div>
       </div>
     </section> -->
-    <section class="section-pricing" id="pricing">
+    <section class="section" id="pricing">
       <div class="container">
         <span class="subheading">Pricing</span>
         <h2 class="heading-secondary">
@@ -314,12 +317,19 @@
 
       <div class="container grid">
         <aside class="plan-details">
-          Prices include all applicable taxes. You can cancel in the first 3 days.
-          
+          Prices include all applicable taxes. You can cancel in the first 3 days.          
         </aside>
       </div>
 
       </div>
+    </section>
+    <section class="section section--sign-up">
+      <div class="section__title">
+        <h3 class="section__header">
+          Make your life easier with Etzelaire!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Start the Process</button>
     </section>
     </main>
 
@@ -401,10 +411,10 @@
         </nav>
       </div>
     </footer>
-    <!-- <div class="modal hidden">
+    <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
-        Open your bank account <br />
+        Get started <br />
         in just <span class="highlight">5 minutes</span>
       </h2>
       <form class="modal__form">
@@ -417,6 +427,6 @@
         <button class="btn">Next step &rarr;</button>
       </form>
     </div>
-    <div class="overlay hidden"></div> -->
+    <div class="overlay hidden"></div>
   </body>
 </html>
