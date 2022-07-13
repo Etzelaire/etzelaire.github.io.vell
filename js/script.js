@@ -395,3 +395,7 @@ document
     // message.remove();
     message.parentElement.removeChild(message);
   });
+
+//////////SCROLL TO TOP//////////////
+
+// PROGRESS BAR/////
