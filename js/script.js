@@ -381,9 +381,9 @@ message.textContent =
 message.innerHTML =
   'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
 
-// header.prepend(message);
+header.prepend(message);
 header.append(message);
-// header.append(message.cloneNode(true));
+header.append(message.cloneNode(true));
 
 // header.before(message);
 // header.after(message);
@@ -399,3 +399,61 @@ document
 //////////SCROLL TO TOP//////////////
 
 // PROGRESS BAR/////
+function scrollProgressBar() {
+  var getMax = function () {
+    return $(document).height() - $(window).height();
+  };
+
+  var getValue = function () {
+    return $(window).scrollTop();
+  };
+
+  var progressBar = $(".progress-bar"),
+    max = getMax(),
+    value,
+    width;
+
+  var getWidth = function () {
+    // Calculate width in percentage
+    value = getValue();
+    width = (value / max) * 100;
+    width = width + "%";
+    return width;
+  };
+
+  var setWidth = function () {
+    progressBar.css({ width: getWidth() });
+  };
+
+  $(document).on("scroll", setWidth);
+  $(window).on("resize", function () {
+    // Need to reset max
+    max = getMax();
+    setWidth();
+  });
+}
+$(document).ready(function () {
+  SF_scripts();
+
+  scrollProgressBar();
+});
+
+// VIDEO CONTROLS//
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+  if (myVideo.paused) myVideo.play();
+  else myVideo.pause();
+}
+
+function makeBig() {
+  myVideo.width = 560;
+}
+
+function makeSmall() {
+  myVideo.width = 320;
+}
+
+function makeNormal() {
+  myVideo.width = 420;
+}
