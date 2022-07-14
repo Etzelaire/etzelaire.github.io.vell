@@ -457,3 +457,8 @@ function makeSmall() {
 function makeNormal() {
   myVideo.width = 420;
 }
+// COOKIE BAR////
+src = "node_modules/cookies-eu-banner/dist/cookies-eu-banner.min.js";
+new CookiesEuBanner(function () {
+  // Your code to launch when user accept cookies
+});
