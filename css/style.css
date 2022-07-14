@@ -1,7 +1,3 @@
-.logo {
-  height: 5rem;
-}
-
 /*NAVIGATION */
 .nav {
   display: flex;
@@ -49,7 +45,7 @@
 }
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: rgb(233, 152, 3);
+  color: var(--color-tertiary);
 }
 
 .main-nav-link--btn:link,
@@ -145,7 +141,7 @@
 /* SECTION1 */
 .section1 {
   /* background-image: url("/img/lazybunnynft.png"); */
-  /* background-color: #dfcece */
+  background-color: #dfcece;
   /* background-blend-mode: lighten; */
   /* background-size: contain; */
   /* background-repeat: no-repeat; */

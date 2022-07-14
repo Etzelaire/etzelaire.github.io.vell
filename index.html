@@ -41,6 +41,14 @@
   </head>
 
   <body>
+    <!-- EU COOKIE BAR -->
+    <div id="cookies-eu-banner" style="display: none;">
+      By continuing your visit to this site, you accept the use of cookies by Google Analytics to make visits statistics.
+      <a href="./read-more.html" id="cookies-eu-more">Read more</a>
+      <button id="cookies-eu-reject">Reject</button>
+      <button id="cookies-eu-accept">Accept</button>
+  </div>
+
     <!-- BACK TO TOP AND PROGRESS BAR  -->
     <div class="progress-container fixed-top">
       <span class="progress-bar"></span>
@@ -150,16 +158,15 @@
             <p class="step-description">
              We will trim, slow-mo, fast-forward, smooth transition and more.
             </p>
-            <div class="video-container">
+          </div>
+          <div class="video-container">
             
-            <video id="#video1" width="600" height="400" autoplay controls="controls">
+            <video id="#video1" width="max-width" height="100%" controls="controls"/>
               <source src="video/masafret cridant.mp4" type="video/mp4">
               
             Your browser does not support the video tag.
             </video>
           </div>
-          </div>
-          
         </div>
       </section>
       <!-- <div class="diets">
@@ -275,7 +282,7 @@
       <div class="container">
         
         <span class="subheading">Pricing</span>
-        <h2 class="heading-secondary">
+        <h2 class="heading2">
           You put the talent and we make it shine
         </h2>
       </div>
@@ -290,11 +297,11 @@
           <ul class="list">
             <li class="list-item">
               <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-              <span>Up to 10 minutes of video</span>
+              <span>10 minutes of video</span>
             </li>
             <li class="list-item">
               <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-              <span>Initial assessment feedback</span>
+              <span>Initial feedback</span>
             </li>
             <li class="list-item">
               <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
@@ -453,5 +460,13 @@
       </form>
     </div>
     <div class="overlay hidden"></div>
+    <!-- MORE COOKIE BAR -->
+    <script src="node_modules/cookies-eu-banner/dist/cookies-eu-banner.min.js"></script>
+<script>
+    new CookiesEuBanner(function () {
+        // Your code to launch when user accept cookies
+    });
+</script> 
+
   </body>
 </html>
