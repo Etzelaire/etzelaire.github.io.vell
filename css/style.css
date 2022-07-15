@@ -392,6 +392,8 @@
 .footer-logo {
   display: block;
   margin-bottom: 3.2rem;
+  height: 9rem;
+  transition: all 0.3s;
 }
 
 .social-links {
