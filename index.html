@@ -38,27 +38,23 @@
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
+    <script defer src="js/script.js"></script>
     
     <title>Etzelaire | Tennis videosediting for seeking sponsorships</title>
     
   </head>
-
+<main>
   <body>
     <!-- EU COOKIE BAR -->
     <script src="js/purecookie.js"></script>
     
 
     <!-- BACK TO TOP AND PROGRESS BAR  -->
-    
-    
-  
+   
 
-
-    
-
-    <header class="header">
+    <header class="header" id="header">
       
-      <nav class="nav">
+      <nav class="nav" id="navbar">
       <a href="#">
         <img
           class="logo"
@@ -74,7 +70,7 @@
           <li class="nav__item"><a class="main-nav-link" href="#section2">Services</a></li>
           <li class="nav__item"><a class="main-nav-link" href="#section3">About</a></li>
           <li class="nav__item">
-            <a class="main-nav-link main-nav-link--btn btn--show-modal" href="#"
+            <a class="btn btn--show-modal"
               >Sign Up</a
             >
           </li>
@@ -87,11 +83,10 @@
       </button>
     </header>
 
-    <main>
+    
       
       <section class="section" id="section-hero">
         <div class="hero">
-          <a id="button"></a>
           <div class="hero-textbox">
             <h1 class="heading1">Your video showdown for US sponsorship seamlessly edited </h1>
             <p class="hero-description">
@@ -361,7 +356,9 @@
       <button class="btn btn--show-modal">Start the Process</button>
     </section>
     
-    </main>
+    <!-- BACK TO TOP -->
+    
+  </main>
 
     <footer class="footer" id="footer">
       <div class="container grid grid--footer">
@@ -439,7 +436,10 @@
           </ul>
         </nav>
       </div>
+      
     </footer>
+
+
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
@@ -453,12 +453,9 @@
         <input type="text" />
         <label>Email Address</label>
         <input type="email" />
-        <button class="btn">Next step &rarr; <a href="form.html"></a></button>
+        <button class="btn">Next step &rarr; </button>
       </form>
     </div>
     <div class="overlay hidden"></div>
-    <!-- MORE COOKIE BAR -->
-     
-
   </body>
 </html>

@@ -1,5 +1,5 @@
 .cookieConsentContainer {
-  z-index: 999;
+  z-index: 100;
 
   width: 30%;
 
@@ -9,7 +9,7 @@
 
   padding: 30px 30px 30px 30px;
 
-  background: #232323;
+  background: rgba(0, 0, 0, 0.85); /* Black background with 30% opacity */
 
   overflow: hidden;
 
@@ -20,6 +20,8 @@
   right: 30px;
 
   display: none;
+
+  border-radius: 9px;
 }
 
 .cookieConsentContainer .cookieTitle a {
@@ -74,7 +76,7 @@
 
   margin-top: 14px;
 
-  background: #332a55;
+  background: #8b82ac;
 
   box-sizing: border-box;
 

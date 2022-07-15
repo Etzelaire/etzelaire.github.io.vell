@@ -8,9 +8,6 @@ const btnScrollTo = document.querySelector(".btn--scroll-to");
 const btnScrollTo1 = document.querySelector(".btn--scroll-to-1");
 const section3 = document.querySelector("#section3");
 const nav = document.querySelector(".nav");
-const tabs = document.querySelectorAll(".operations__tab");
-const tabsContainer = document.querySelector(".operations__tab-container");
-const tabsContent = document.querySelectorAll(".operations__content");
 
 console.log("A page produced and edited by Etzelaire");
 
@@ -23,6 +20,8 @@ console.log("A page produced and edited by Etzelaire");
 //   h1.style.backgroundColor = "red";
 //   h1.style.padding = "5rem";
 // });
+// Make mobile navigation work
+
 ////////////////////////////////////////////////
 // Modal window
 
@@ -119,105 +118,135 @@ allLinks.forEach(function (link) {
   });
 
   // Close mobile naviagtion
-  // if (link.classList.contains("main-nav-link"))
-  // headerEl.classList.toggle("nav-open");
-  // });
-  // });
+  if (link.classList.contains("main-nav-link"))
+    headerEl.classList.toggle("nav-open");
+});
 
-  // PAGE NAVIGATION
-  document.querySelector(".nav__links").addEventListener("click", function (e) {
+// PAGE NAVIGATION
+document
+  .querySelector(".main-nav-list")
+  .addEventListener("click", function (e) {
     e.preventDefault();
 
     // Matching strategy
-    if (e.target.classList.contains("nav__link")) {
+    if (e.target.classList.contains("main-nav-link")) {
       const id = e.target.getAttribute("href");
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
     }
   });
 
-  // Menu fade animation
-  const handleHover = function (e) {
-    if (e.target.classList.contains("main-nav-link")) {
-      const link = e.target;
-      const siblings = link.closest(".nav").querySelectorAll(".main-nav-link");
-      const logo = link.closest(".nav").querySelector("img");
+// Menu fade animation
+const handleHover = function (e) {
+  if (e.target.classList.contains("main-nav-link")) {
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".main-nav-link");
+    const logo = link.closest(".nav").querySelector("img");
 
-      siblings.forEach((el) => {
-        if (el !== link) el.style.opacity = this;
-      });
-      logo.style.opacity = this;
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+// Passing "argument" into handler
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));
+///////////////////////////////////////////////////////////
+// Sticky navigation
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
     }
-  };
 
-  // Passing "argument" into handler
-  nav.addEventListener("mouseover", handleHover.bind(0.5));
-  nav.addEventListener("mouseout", handleHover.bind(1));
-  ///////////////////////////////////////
-  // Sticky navigation: Intersection Observer API
-
-  const header = document.querySelector(".header");
-  const navHeight = nav.getBoundingClientRect().height;
-
-  const stickyNav = function (entries) {
-    const [entry] = entries;
-    // console.log(entry);
-
-    if (!entry.isIntersecting) nav.classList.add("sticky");
-    else nav.classList.remove("sticky");
-  };
-
-  const headerObserver = new IntersectionObserver(stickyNav, {
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
     root: null,
     threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  });
-
-  headerObserver.observe(header);
-
-  ///////////////////////////////////////
-  ///////////////////////////////////////
-  // Reveal sections
-  const allSections = document.querySelectorAll(".section");
-
-  const revealSection = function (entries, observer) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
-    entry.target.classList.remove("section--hidden");
-    observer.unobserve(entry.target);
-  };
-
-  const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.15,
-  });
-
-  allSections.forEach(function (section) {
-    sectionObserver.observe(section);
-    section.classList.add("section--hidden");
-  });
-  ///////////////////////////////////////////////////////////
-  // Fixing flexbox gap property missing in some Safari versions
-  function checkFlexGap() {
-    var flex = document.createElement("div");
-    flex.style.display = "flex";
-    flex.style.flexDirection = "column";
-    flex.style.rowGap = "1px";
-
-    flex.appendChild(document.createElement("div"));
-    flex.appendChild(document.createElement("div"));
-
-    document.body.appendChild(flex);
-    var isSupported = flex.scrollHeight === 1;
-    flex.parentNode.removeChild(flex);
-    console.log(isSupported);
-
-    if (!isSupported) document.body.classList.add("no-flexbox-gap");
+    rootMargin: "-80px",
   }
-  checkFlexGap();
+);
+obs.observe(sectionHeroEl);
+///////////////////////////////////////
+// Sticky navigation: Intersection Observer API
+
+// const header = document.querySelector(".header");
+// const navHeight = nav.getBoundingClientRect().height;
+
+// const stickyNav = function (entries) {
+//   const [entry] = entries;
+//   // console.log(entry);
+
+//   if (!entry.isIntersecting) nav.classList.add("sticky");
+//   else nav.classList.remove("sticky");
+// };
+
+// const headerObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${navHeight}px`,
+// });
+
+// headerObserver.observe(header);
+
+///////////////////////////////////////
+///////////////////////////////////////
+// Reveal sections
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
 });
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
+///////////////////////////////////////////////////////////
+// Fixing flexbox gap property missing in some Safari versions/////
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+checkFlexGap();
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+//BACK TO TOP BUTTON//
 
 //////////////////////////////////////
 // Slider
@@ -361,82 +390,17 @@ allLinks.forEach(function (link) {
 
 ///////////////////////////////////////
 // Page navigation
-document
-  .querySelector(".main-nav-list")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
+// document
+//   .querySelector(".main-nav-list")
+//   .addEventListener("click", function (e) {
+//     e.preventDefault();
 
-    // Matching strategy
-    if (e.target.classList.contains("main-nav-list")) {
-      const id = e.target.getAttribute("href");
-      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-    }
-  });
-
-// Creating and inserting elements
-const message = document.createElement("div");
-message.classList.add("cookie-message");
-message.textContent =
-  "We use cookies for improved functionality and analytics.";
-message.innerHTML =
-  'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
-
-header.prepend(message);
-header.append(message);
-header.append(message.cloneNode(true));
-
-// header.before(message);
-// header.after(message);
-
-// Delete elements
-document
-  .querySelector(".btn--close-cookie")
-  .addEventListener("click", function () {
-    // message.remove();
-    message.parentElement.removeChild(message);
-  });
-
-//////////SCROLL TO TOP//////////////
-
-// PROGRESS BAR/////
-function scrollProgressBar() {
-  var getMax = function () {
-    return $(document).height() - $(window).height();
-  };
-
-  var getValue = function () {
-    return $(window).scrollTop();
-  };
-
-  var progressBar = $(".progress-bar"),
-    max = getMax(),
-    value,
-    width;
-
-  var getWidth = function () {
-    // Calculate width in percentage
-    value = getValue();
-    width = (value / max) * 100;
-    width = width + "%";
-    return width;
-  };
-
-  var setWidth = function () {
-    progressBar.css({ width: getWidth() });
-  };
-
-  $(document).on("scroll", setWidth);
-  $(window).on("resize", function () {
-    // Need to reset max
-    max = getMax();
-    setWidth();
-  });
-}
-$(document).ready(function () {
-  SF_scripts();
-
-  scrollProgressBar();
-});
+//     // Matching strategy
+//     if (e.target.classList.contains("main-nav-list")) {
+//       const id = e.target.getAttribute("href");
+//       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+//     }
+//   });
 
 // VIDEO CONTROLS//
 var myVideo = document.getElementById("video1");
@@ -457,8 +421,10 @@ function makeSmall() {
 function makeNormal() {
   myVideo.width = 420;
 }
-// COOKIE BAR////
-src = "node_modules/cookies-eu-banner/dist/cookies-eu-banner.min.js";
-new CookiesEuBanner(function () {
-  // Your code to launch when user accept cookies
-});
+
+/////////////////////////////////////////
+//////////////////////////////////////////////
+//BACK TO TOP BUTTON///
+
+///////////////////
+// PROGRESS BAR/////
