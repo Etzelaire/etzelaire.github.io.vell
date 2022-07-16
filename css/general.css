@@ -11,7 +11,22 @@
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
+/* SCROLLBAR */
+html::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
 
+html::-webkit-scrollbar-thumb {
+  background: #4bbb7d;
+  border-radius: 9px;
+  border-style: outset;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(197, 211, 218);
+}
+/* ///////////// */
 * {
   padding: 0;
   margin: 0;

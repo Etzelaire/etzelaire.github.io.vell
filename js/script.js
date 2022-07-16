@@ -427,4 +427,4 @@ function makeNormal() {
 //BACK TO TOP BUTTON///
 
 ///////////////////
-// PROGRESS BAR/////
+// SCROLL BAR/////
