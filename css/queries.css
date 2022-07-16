@@ -76,9 +76,9 @@
     width: 60%;
   }
 
-  .logos img {
+  /* .logos img {
     height: 2.4rem;
-  }
+  } */
 
   .step-number {
     font-size: 7.4rem;
@@ -224,9 +224,9 @@
     width: 80%;
   }
 
-  .logos img {
-    height: 2.4rem;
-  }
+  /* .logos img { */
+  /* height: 4.rem;
+  } */
 
   .step-img-box:nth-child(2) {
     grid-row: 1;
