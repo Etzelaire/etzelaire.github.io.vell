@@ -93,6 +93,13 @@ btnScrollTo1.addEventListener("click", function (e) {
   );
   pricing.scrollIntoView({ behavior: "smooth" });
 });
+//////////////////////////
+// BUTTON OPEN FORM
+// const exampleBtn = document.getElementById("btn-modal");
+
+// exampleBtn.addEventListener("click", () => {
+//   window.open("form.html");
+// });
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 
@@ -155,29 +162,29 @@ nav.addEventListener("mouseout", handleHover.bind(1));
 ///////////////////////////////////////////////////////////
 // Sticky navigation
 
-const sectionHeroEl = document.querySelector(".section-hero");
+// const sectionHeroEl = document.querySelector(".section-hero");
 
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    console.log(ent);
+// const obs = new IntersectionObserver(
+//   function (entries) {
+//     const ent = entries[0];
+//     console.log(ent);
 
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
+//     if (ent.isIntersecting === false) {
+//       document.body.classList.add("sticky");
+//     }
 
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
-obs.observe(sectionHeroEl);
+//     if (ent.isIntersecting === true) {
+//       document.body.classList.remove("sticky");
+//     }
+//   },
+//   {
+//     // In the viewport
+//     root: null,
+//     threshold: 0,
+//     rootMargin: "-80px",
+//   }
+// );
+// obs.observe(sectionHeroEl);
 ///////////////////////////////////////
 // Sticky navigation: Intersection Observer API
 
