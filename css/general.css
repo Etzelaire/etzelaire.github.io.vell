@@ -83,7 +83,9 @@ p {
 /*///////////////////////////////////////////////////*/
 .logo {
   height: 5rem;
+  transition: all 0.3s;
 }
+
 .container {
   max-width: 120rem;
   padding: 0 3.2rem;
