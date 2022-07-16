@@ -71,11 +71,10 @@ p {
   justify-content: space-between;
   align-items: center;
   background-color: aliceblue;
-
+  gap: 9.6rem;
   /* sticky header*/
   /* Pay special attention here! */
   position: relative;
-  top: 0px;
   height: 9.6rem;
   padding: 0 4.8rem;
 }
