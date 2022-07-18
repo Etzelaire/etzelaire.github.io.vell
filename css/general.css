@@ -18,9 +18,8 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #4bbb7d;
+  background: #d8c48d;
   border-radius: 9px;
-  border-style: outset;
 }
 
 html::-webkit-scrollbar-track {
@@ -85,7 +84,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aliceblue;
+  background-color: #fdf2e9;
   gap: 9.6rem;
   /* sticky header*/
   /* Pay special attention here! */

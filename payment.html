@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Etzelaire is a website focused on delivering young tennis players the professional assistance they need to put together a video showcasing their proficiency in the sport for recruiters to analyse"
+    />
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/lazybunnynft-modified.png"
+    />
+    <link rel="apple-touch-icon" href="/img/lazybunnynft-modified.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/queries.css" />
+    <!-- PURE COOKIE STYLESHEET -->
+    <link rel="stylesheet" href="/css/purecookie.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="/js/script.js"></script>
+
+    <title>Etzelaire | Tennis videoediting for seeking sponsorships</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-75">
+        <div class="container-payment">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-50">
+                <h3>Billing Address</h3>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="John M. Doe"
+                />
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="john@example.com"
+                />
+                <label for="adr"
+                  ><i class="fa fa-address-card-o"></i> Address</label
+                >
+                <input
+                  type="text"
+                  id="adr"
+                  name="address"
+                  placeholder="542 W. 15th Street"
+                />
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="New York"
+                />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state">State</label>
+                    <input
+                      type="text"
+                      id="state"
+                      name="state"
+                      placeholder="NY"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Zip</label>
+                    <input
+                      type="text"
+                      id="zip"
+                      name="zip"
+                      placeholder="10001"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color: navy"></i>
+                  <i class="fa fa-cc-amex" style="color: blue"></i>
+                  <i class="fa fa-cc-mastercard" style="color: red"></i>
+                  <i class="fa fa-cc-discover" style="color: orange"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input
+                  type="text"
+                  id="cname"
+                  name="cardname"
+                  placeholder="John More Doe"
+                />
+                <label for="ccnum">Credit card number</label>
+                <input
+                  type="text"
+                  id="ccnum"
+                  name="cardnumber"
+                  placeholder="1111-2222-3333-4444"
+                />
+                <label for="expmonth">Exp Month</label>
+                <input
+                  type="text"
+                  id="expmonth"
+                  name="expmonth"
+                  placeholder="September"
+                />
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input
+                      type="text"
+                      id="expyear"
+                      name="expyear"
+                      placeholder="2018"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr" />
+              Shipping address same as billing
+            </label>
+            <input
+              type="submit"
+              value="Continue to checkout"
+              class="btn-payment"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="col-25">
+        <div class="container-payment">
+          <h4>
+            Cart
+            <span class="price" style="color: black">
+              <i class="fa fa-shopping-cart"></i>
+              <b>4</b>
+            </span>
+          </h4>
+          <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+          <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+          <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+          <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+          <hr />
+          <p>
+            Total <span class="price" style="color: black"><b>$30</b></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <script>
+      configObj = {
+        buttonD:
+          "M8 18.568L10.8 21.333 16 16.198 21.2 21.333 24 18.568 16 10.667z",
+        buttonT:
+          "translate(-1148 -172) translate(832 140) translate(32 32) translate(284)",
+        shadowSize: "none",
+        roundnessSize: "12px",
+        buttonDToBottom: "32px",
+        buttonDToRight: "32px",
+        selectedBackgroundColor: "#afdb0e",
+        selectedIconColor: "rgb(16, 19, 24)",
+        buttonWidth: "40px",
+        buttonHeight: "40px",
+        svgWidth: "32px",
+        svgHeight: "32px",
+      };
+      function createButton(obj, pageSimulator) {
+        const body = document.querySelector("body");
+        backToTopButton = document.createElement("span");
+        backToTopButton.classList.add("softr-back-to-top-button");
+        backToTopButton.id = "softr-back-to-top-button";
+        pageSimulator
+          ? pageSimulator.appendChild(backToTopButton)
+          : body.appendChild(backToTopButton);
+        backToTopButton.style.width = obj.buttonWidth;
+        backToTopButton.style.height = obj.buttonHeight;
+        backToTopButton.style.marginRight = obj.buttonDToRight;
+        backToTopButton.style.marginBottom = obj.buttonDToBottom;
+        backToTopButton.style.borderRadius = obj.roundnessSize;
+        backToTopButton.style.boxShadow = obj.shadowSize;
+        backToTopButton.style.color = obj.selectedBackgroundColor;
+        backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;
+        pageSimulator
+          ? (backToTopButton.style.position = "absolute")
+          : (backToTopButton.style.position = "fixed");
+        backToTopButton.style.outline = "none";
+        backToTopButton.style.bottom = "0px";
+        backToTopButton.style.right = "0px";
+        backToTopButton.style.cursor = "pointer";
+        backToTopButton.style.textAlign = "center";
+        backToTopButton.style.border = "solid 2px currentColor";
+        backToTopButton.innerHTML =
+          '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';
+        backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");
+        backToTopButtonSvg.style.verticalAlign = "middle";
+        backToTopButtonSvg.style.margin = "auto";
+        backToTopButtonSvg.style.justifyContent = "center";
+        backToTopButtonSvg.style.width = obj.svgWidth;
+        backToTopButtonSvg.style.height = obj.svgHeight;
+        backToTopButton.appendChild(backToTopButtonSvg);
+        backToTopButtonImg = document.querySelector(".back-to-top-button-img");
+        backToTopButtonImg.style.fill = obj.selectedIconColor;
+        backToTopButtonSvg.appendChild(backToTopButtonImg);
+        backToTopButtonImg.setAttribute("d", obj.buttonD);
+        backToTopButtonImg.setAttribute("transform", obj.buttonT);
+        if (!pageSimulator) {
+          backToTopButton.style.display = "none";
+          window.onscroll = function () {
+            if (
+              document.body.scrollTop > 20 ||
+              document.documentElement.scrollTop > 20
+            ) {
+              backToTopButton.style.display = "block";
+            } else {
+              backToTopButton.style.display = "none";
+            }
+          };
+          backToTopButton.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          };
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        createButton(configObj, null);
+      });
+    </script>
+
+    <footer class="footer" id="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              class="footer-logo"
+              alt="Etzelaire logo"
+              src="/img/lazybunnynft-modified.png"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2022</span> by Etzelaire, Inc.
+            All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Us</p>
+          <address class="contacts">
+            <a class="footer-link" href="mailto:etzelaire@gmail.com"
+              >etzelaire@gmail.com</a
+            >
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <!-- <li><a class="footer-link" href="#">iOS app</a></li> -->
+            <!-- <li><a class="footer-link" href="#">Android app</a></li> -->
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">About Us</p>
+          <ul class="footer-nav">
+            <li>
+              <a class="footer-link" href="/pages/about.html">Who are We?</a>
+            </li>
+            <li><a class="footer-link" href="services.html">Services</a></li>
+            <li>
+              <a class="footer-link" href="careers.html">Work with us?</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="q&a.html">Q&A Section</a></li>
+            <li><a class="footer-link" href="#">Sites of Interest</a></li>
+            <li>
+              <a class="footer-link" href="privacy.html">Privacy & terms</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Get started <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn btn-modal" id="btn-modal">
+          <a href="form.html">Next step &rarr;</a>
+        </button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
