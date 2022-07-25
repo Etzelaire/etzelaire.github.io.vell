@@ -176,7 +176,7 @@ strong {
   border: none;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.3s;
+  transition: all 1s;
 }
 
 .btn:hover,
