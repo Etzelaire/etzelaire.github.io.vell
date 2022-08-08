@@ -148,11 +148,60 @@
 .delivered-text {
   font-size: 1.8rem;
   font-weight: 600;
+  color: #31a565;
 }
 
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  margin: inherit 12rem;
+}
+
+.features__img {
+  width: 100%;
+}
+
+.features__feature {
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  font-size: 1.5rem;
+}
+
+.features__feature p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--color-primary-opacity); */
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+/* .features__icon svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: var(--color-primary);
+} */
+
+.features__header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 /* SECTION1 */
 .section1 {
@@ -222,11 +271,10 @@
   height: 5.4rem;
 }
 /*SECTION3*/
-.section3 {
-  background-image: url("/img/gallery/serve.jpg");
+#section3 {
+  background-image: url("/img/gallery/udhailiyah.jpg");
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
-
   background-size: cover;
   background-repeat: no-repeat;
   padding: 15rem 3rem;
@@ -508,6 +556,12 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+.btn-redirect {
+  text-align: center;
+  margin-top: 4.8rem;
+  color: #0e1104;
+}
 /* /////////////////////////////////////// */
 /*////////* CTA FORM /////////////////////*/
 /* //////////////////////////////////// */
@@ -772,7 +826,7 @@ th:last-child {
 }
 
 tr {
-  color: #20743c;
+  color: #125026;
   font-size: 16px;
   font-weight: normal;
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
@@ -781,6 +835,7 @@ tr {
 tr:hover td {
   background: #fdf2e9;
   color: #0e1104;
+
   border-top: 1px solid #8fec43;
   border-bottom: 1px solid #8fec43;
 }
@@ -794,7 +849,7 @@ tr:last-child {
 }
 
 tr:nth-child(odd) td {
-  background: #ebebeb;
+  background: #eaf7e7;
 }
 
 tr:nth-child(odd):hover td {
