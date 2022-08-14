@@ -22,7 +22,7 @@
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
-  color: #444;
+  color: #fff;
   font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
@@ -624,6 +624,8 @@
 .footer {
   padding: 12.8rem 0;
   border-top: 1px solid rgb(173, 164, 164);
+  background-color: #37383d;
+  color: #fff;
 }
 .grid--footer {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
@@ -644,14 +646,15 @@
   list-style: none;
   display: flex;
   gap: 2.4rem;
+  color: #fff;
 }
 
 .copyright {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: rgb(16, 19, 24);
   margin-top: auto;
   font-weight: 400;
+  color: #fff;
 }
 
 .footer-heading {
@@ -683,6 +686,7 @@
   color: #252222;
   font-size: 1.6rem;
   transition: all 0.3s;
+  color: #fff;
 }
 
 .footer-link:hover,

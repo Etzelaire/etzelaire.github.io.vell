@@ -82,7 +82,7 @@ btnScrollTo.addEventListener("click", function (e) {
 });
 ///////////////////////////////////////////
 btnScrollTo1.addEventListener("click", function (e) {
-  const s1coords = pricing.getBoundingClientRect();
+  const s1coords = section2.getBoundingClientRect();
   console.log(s1coords);
 
   console.log(e.target.getBoundingClientRect());
@@ -94,7 +94,7 @@ btnScrollTo1.addEventListener("click", function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
-  pricing.scrollIntoView({ behavior: "smooth" });
+  section2.scrollIntoView({ behavior: "smooth" });
 });
 //////////////////////////
 // BUTTON OPEN FORM
@@ -385,24 +385,24 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
 //   });
 
 // VIDEO CONTROLS//
-var myVideo = document.getElementById("video1");
+// var myVideo = document.getElementById("video1");
 
-function playPause() {
-  if (myVideo.paused) myVideo.play();
-  else myVideo.pause();
-}
+// function playPause() {
+//   if (myVideo.paused) myVideo.play();
+//   else myVideo.pause();
+// }
 
-function makeBig() {
-  myVideo.width = 560;
-}
+// function makeBig() {
+//   myVideo.width = 560;
+// }
 
-function makeSmall() {
-  myVideo.width = 320;
-}
+// function makeSmall() {
+//   myVideo.width = 320;
+// }
 
-function makeNormal() {
-  myVideo.width = 420;
-}
+// function makeNormal() {
+//   myVideo.width = 420;
+// }
 /////////////////////////////////////////
 //////////////////////////////////////////////
 //PAYMENT HTML//

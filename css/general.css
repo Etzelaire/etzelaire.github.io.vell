@@ -75,6 +75,13 @@ p {
   color: #39b385;
   margin-bottom: 1rem;
 }
+
+.hero-p {
+  font-size: 1.75rem;
+  line-height: 2;
+  font-weight: 400;
+  padding: 5rem;
+}
 /*/////////////////HEADER///////////////*/
 .header {
   font-size: 4rem;
@@ -84,7 +91,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fdf2e9;
+  background-color: #37383d;
+
   gap: 9.6rem;
   /* sticky header*/
   /* Pay special attention here! */
