@@ -52,6 +52,7 @@ p {
 }
 
 /* GENERAL ELEMENTS */
+
 .section {
   padding: 15rem 3rem;
   border-top: 1px solid #ddd;
@@ -92,8 +93,6 @@ p {
   justify-content: space-between;
   align-items: center;
   background-color: #37383d;
-
-  gap: 9.6rem;
   /* sticky header*/
   /* Pay special attention here! */
   position: relative;
@@ -142,6 +141,7 @@ p {
   font-size: 5rem;
   line-height: 1;
   margin-bottom: 3rem;
+  text-align: center;
 }
 .heading2 {
   font-size: 4rem;
