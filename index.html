@@ -10,7 +10,7 @@
     <!-- Always include this line of code!!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="/img/lazybunnynft-modified.png" />
+    <link rel="icon" href="/img/lazybunnynft-modified.png" />
     <link rel="apple-touch-icon" href="/img/lazybunnynft-modified.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -29,20 +29,14 @@
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-    ></script>
+    
 
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
     <script defer src="/js/script.js"></script>
-    
-    
-    <title>Etzelaire | jordivargashere</title>
-    
+    <title>jordivargashere  | A travel vlog</title>
   </head>
 
   <body>
@@ -63,17 +57,26 @@
           data-version-number="1.0"
         />
       </a>
-    
-      <nav class="nav" id="navbar">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="index.html">Home</a></li>
+          <li><a class="main-nav-link" href="services.html">Services</a></li>
+          <li><a class="main-nav-link" href="about.html">About</a></li>
+          <li class="nav__item">
+            <a class="main-nav-link" href="#">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <nav class="nav" id="navbar">
         <ul class="main-nav-list">
           <li  class="nav__item"><a class="main-nav-link" href="index.html">Home</a></li>
           <li  class="nav__item"><a class="main-nav-link" href="about.html">About</a></li>
           <li class="nav__item"><a class="main-nav-link" href="newsleter.html">Newsletter</a></li>
          
-          <!-- <li class="nav__item"><a class="main-nav-link" href="saudi.html">Saudi</a></li> -->
-          <li class="nav__item"><a class="main-nav-link" href="form.html">Contact</a></li>
+          <li class="nav__item"><a class="main-nav-link" href="saudi.html">Saudi</a></li> -->
+          <!-- <li class="nav__item"><a class="main-nav-link" href="form.html">Contact</a></li>
         </ul>
-      </nav>
+      </nav> --> 
 
       <button class="btn-mobile-nav">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
@@ -165,71 +168,8 @@
         </div>
       </section>
 
-      <section class="sectionmap">
-        <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
-        <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
-        <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
-        <div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+      
        
-        <script type="text/javascript">
-        var map = AmCharts.makeChart("mapdiv",{
-        type: "map",
-        theme: "dark",
-        projection: "mercator",
-        panEventsEnabled : true,
-        backgroundColor : "#C8EEF0",
-        backgroundAlpha : 1,
-        zoomControl: {
-        zoomControlEnabled : true
-        },
-        dataProvider : {
-        map : "worldHigh",
-        getAreasFromMap : true,
-        areas :
-        [
-          {
-            "id": "AD",
-            "showAsSelected": true
-          },
-          {
-            "id": "FR",
-            "showAsSelected": true
-          },
-          {
-            "id": "IT",
-            "showAsSelected": true
-          },
-          {
-            "id": "PT",
-            "showAsSelected": true
-          },
-          {
-            "id": "ES",
-            "showAsSelected": true
-          },
-          {
-            "id": "CH",
-            "showAsSelected": true
-          },
-          {
-            "id": "SA",
-            "showAsSelected": true
-          }
-        ]
-        },
-        areasSettings : {
-        autoZoom : true,
-        color : "#B4B4B7",
-        colorSolid : "#afdb0e",
-        selectedColor : "#afdb0e",
-        outlineColor : "#666666",
-        rollOverColor : "#bdc8ec",
-        rollOverOutlineColor : "#000000"
-        }
-        });
-        </script>
-        
-      </section>
       <!-- <section class="section" id="section-featured">
         <div class="container">
           <h2 class="heading-featured-in">Saudi is filled with interesting experiences and welcoming people</h2>
