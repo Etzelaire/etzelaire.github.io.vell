@@ -41,6 +41,7 @@ const closeModal = function () {
 
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 
+//! apparently line 45 gives an error on the console --> null value
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 

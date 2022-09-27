@@ -5,7 +5,7 @@
   --color-primary-darker: #4bbb7d;
   --color-secondary-darker: #ffbb00;
   --color-tertiary-darker: #fd424b;
-  --color-primary-opacity: #5ec5763a;
+  --color-primary-opacity: #5bbbbb3a;
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
@@ -18,13 +18,12 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #d8c48d;
-  border-radius: 9px;
+  background: rgb(152, 230, 63);
 }
-
+/*
 html::-webkit-scrollbar-track {
   background: rgb(197, 211, 218);
-}
+} */
 /* ///////////// */
 * {
   padding: 0;
@@ -100,10 +99,13 @@ p {
   padding: 0 4.8rem;
 }
 
+/*///////////////////////////////////////////////////////*/
+
 /*///////////////////////////////////////////////////*/
 .logo {
-  height: 5rem;
+  height: 7.6rem;
   transition: all 0.3s;
+  margin-top: 10px;
 }
 
 .container {
@@ -180,7 +182,8 @@ strong {
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   color: #37383d;
-  background-color: #bbc4e2;
+  background-color: #5bbbbb3a;
+
   border: none;
   cursor: pointer;
   font-family: inherit;
@@ -189,9 +192,9 @@ strong {
 
 .btn:hover,
 .btn:active {
-  color: rgb(4, 5, 2);
+  color: aliceblue;
   transition: 0.6s;
-  background-color: #7a86ad;
+  background-color: #37383d;
 }
 
 .btn--text {
