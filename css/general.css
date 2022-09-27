@@ -182,9 +182,9 @@ strong {
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   color: #37383d;
-  background-color: rgb(84, 160, 148);
+  background-color: rgb(111, 202, 154);
 
-  border: 1px 1px #37383d;
+  border: none;
   cursor: pointer;
   font-family: inherit;
   transition: all 1s;

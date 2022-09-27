@@ -94,7 +94,7 @@
 }
 /*HERO SECTION */
 .section-hero {
-  background-color: #4e9e79;
+  background-color: rgb(197, 230, 225);
   padding: 4.8rem 0 9.6rem 0;
 }
 
@@ -155,11 +155,11 @@
 .delivered-text {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #73d319;
+  color: rgb(59, 107, 82);
 }
 
 .delivered-text span {
-  color: #7ed438;
+  color: rgb(59, 107, 82);
   font-weight: 700;
 }
 
