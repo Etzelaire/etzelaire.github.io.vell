@@ -34,14 +34,12 @@ html::-webkit-scrollbar-track {
 html {
   font-size: 65%;
   overflow-x: hidden;
-  overflow-y:auto;
 }
 
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-
   overflow-x: hidden;
 }
 
@@ -82,6 +80,7 @@ p {
   line-height: 2;
   font-weight: 400;
   padding: 5rem;
+  text-align: justify;
 }
 /*/////////////////HEADER///////////////*/
 .header {
@@ -184,7 +183,6 @@ strong {
   border-radius: 9px;
   color: #37383d;
   background-color: rgb(111, 202, 154);
-
   border: none;
   cursor: pointer;
   font-family: inherit;
