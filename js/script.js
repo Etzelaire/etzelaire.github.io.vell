@@ -95,7 +95,7 @@ const handleHover = function (e) {
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 ////////////////////////////////////////
-Sticky navigation: Intersection Observer API
+//Sticky navigation: Intersection Observer API
 
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
