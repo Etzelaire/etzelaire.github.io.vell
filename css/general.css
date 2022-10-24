@@ -18,7 +18,8 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: rgb(152, 230, 63);
+  background: #52c7aa;
+  scroll-behavior: smooth;
 }
 /*
 html::-webkit-scrollbar-track {
@@ -106,6 +107,10 @@ p {
   height: 7.6rem;
   transition: all 0.3s;
   margin-top: 10px;
+}
+
+.logo:hover {
+  height: 7.9rem;
 }
 
 .container {
