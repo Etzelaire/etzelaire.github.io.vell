@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Etzelaire is a website focused on delivering my experience travelling the world and meeting people"
+      content="Etzelaire is a website focused on delivering my trustful experience in Saudi and providing the public with tips, advice and information about life in the kingdom"
     />
     <!-- Always include this line of code!!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="/img/lazybunnynft-modified.png" />
+    <link rel="icon" type="image/x-icon" href="/img/lazybunnynft-modified.png" />
     <link rel="apple-touch-icon" href="/img/lazybunnynft-modified.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/queries.css" />
     <!-- PURE COOKIE STYLESHEET -->
-    <link rel="stylesheet" href="/css/purecookie.css" />
+    <link rel="stylesheet" href="/css/purecookie.css"/>
 
     <script
       type="module"
@@ -33,20 +33,23 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
+
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
     <script defer src="/js/script.js"></script>
-
-    <title>jordivargashere | A travel vlog</title>
+    
+    <title>Etzelaire | The Beauty of Oman</title>
+    
   </head>
 
-  <!-- START OF   -->
-
-  <body---->
+  <body>
     <!-- EU COOKIE BAR -->
     <script src="/js/purecookie.js"></script>
+    
+   
+   
 
     <header class="header" id="header">
       <a href="index.html">
@@ -54,18 +57,18 @@
           class="logo"
           alt="Etzelaire official logo"
           src="/img/lazybunnynft-modified.png"
-          id="logoh"
+          id="logo"
           designer="Etzelaire"
           data-version-number="1.0"
         />
       </a>
 
-      <nav class="main-nav">
+      <nav class="nav" id="navbar">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="index.html">Home</a></li>
-          <li><a class="main-nav-link" href="trips.html">Trips</a></li>
-          <li><a class="main-nav-link" href="about.html">About</a></li>
-          <li><a class="main-nav-link" href="contact.html">Contact</a></li>
+          <li  class="nav__item"><a class="main-nav-link" href="index.html">Home</a></li>
+          <li  class="nav__item"><a class="main-nav-link" href="about.html">About</a></li>
+          <li class="nav__item"><a class="main-nav-link" href="newsleter.html">Newsletter</a></li>
+          <li class="nav__item"><a class="main-nav-link" href="form.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -74,140 +77,465 @@
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
     </header>
- <!-- HEADER ENDS   -->
-    <section class="section" id="section--1">
-        <div class="section__title">
-          <h2 class="section__description">Trip List</h2>
+
+    
+      
+      <sect class="section-hero" id="section-hero">
+        <div class="hero">
+          <div class="hero-textbox">
+            <h1 class="heading1">Everything you need to know about Life in the Kingdom</h1>
+            <p class="hero-description">
+              If you're an expat coming to Saudi you may want to take a look around the site!
+            </p>
+            <div class="hero-buttons">
+            <button class="btn btn--scroll-to-1">New in Saudi</button>
+            <button class="btn btn--scroll-to">
+              Life in Compounds &DownArrow;
+            </button>
+            </div>
           
+          <div class="delivered-meals">
+            <div class="delivered-imgs">
+              <img src="img/gallery/mecca.jpg" alt="Customer photo" />
+              <img src="img/gallery/kingdom-centre-tower.jpg" alt="Customer photo" />
+              <img src="img/gallery/fahdfountain.jpg" alt="Customer photo" />
+              <img src="img/gallery/alula.jpg" alt="Customer photo" />
+            </div>
+            <p class="delivered-text">
+              <span>Love</span> Saudi!
+            </p>
+          </div>
+        
         </div>
+        <!-- <div class="hero-img-box">
+          <picture>
+            <source src="/img/lazybunnynft-modified" type="image/webp" />
+            <source src="/img/lazybunnynft-modified" type="image/png" />
+
+            <img
+              src="img/gallery/pexels-bogdan-glisik-1405355.jpg"
+              class="hero-img"
+              alt="Awesome image of a random guy playing tennis"
+            />
+          </picture>
+        </div> -->
+      </div>
+      </section>
+     
+       
+      <section class="section" id="section1">
+        
+        <div class="container">
+          <p class="step-number">01</p>
+          <h2 class="heading-feature">What to do in Saudi?</h2>
+        
   
         <div class="features">
           <img
-            src="img/gallery/praguesquare.JPG"
+            src="img/gallery/fahdfountain.jpg"
             data-src="img/digital.jpg"
             alt="Computer"
-            class="features__img "
+            class="features__img"
           />
           <div class="features__feature">
             <div class="features__icon">
-              <svg>
-                <use xlink:href="img/icons.svg#icon-monitor"></use>
-              </svg>
+              <img
+            src="img/icons/location.png"
+            data-src="img/grow.jpg"
+            alt="Plant"
+            class="features__img"
+          />
             </div>
-            <h5 class="features__header">Into Czech Republic! Prague</h5>
+            <h5 class="features__header">King Fahd's Fountain</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
-              sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
-              debitis ducimus.
+              This 853-foot fountain is reputed to be the tallest fountain in the world, and is best appreciated when illuminated at night.
             </p>
           </div>
   
-          
-  
-      <section class="section" id="section--2">
-        <div class="section__title">
-          <h2 class="section__description">section2</h2>
-          <h3 class="section__header">
-            text for section 2
-          </h3>
-          
-        </div>
-        <p>and the paragraph</p>       
-      </section>
-  </body>
-<!-- BACK TO TOP -->
-<script> configObj = {"buttonD":"M8 18.568L10.8 21.333 16 16.198 21.2 21.333 24 18.568 16 10.667z","buttonT":"translate(-1148 -172) translate(832 140) translate(32 32) translate(284)","shadowSize":"none","roundnessSize":"12px","buttonDToBottom":"32px","buttonDToRight":"32px","selectedBackgroundColor":"#afdb0e","selectedIconColor":"rgb(16, 19, 24)","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};function createButton(obj, pageSimulator) {    const body = document.querySelector("body");    backToTopButton = document.createElement("span");    backToTopButton.classList.add("softr-back-to-top-button");    backToTopButton.id = "softr-back-to-top-button";    pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);    backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;    backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;    backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;    backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;    pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";    backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";    backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer";    backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";    backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });</script>
-  
-</main>  
-  <footer class="footer" id="footer">
-    <div class="container grid grid--footer">
-      <div class="logo-col">
-        <a href="#" class="footer-logo">
-          <img
-            class="footer-logo"
-            alt="Etzelaire logo"
-            title="Back to Home"
-            src="/img/lazybunnynft-modified.png"
+          <div class="features__feature">
+            <div class="features__icon">
+              <img
+            src="img/icons/location.png"
+            data-src="img/grow.jpg"
+            alt="Plant"
+            class="features__img"
           />
-        </a>
-
-        <ul class="social-links">
-          <li>
-            <a class="footer-link" href="https://www.instagram.com/jordivargasthere/" target="blank"
-              ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a class="footer-link" href="https://www.youtube.com/channel/UCeyST3jdbEQSROir8xMJZ2A" target="blank"
-              ><ion-icon class="social-icon" name="logo-youtube"></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a class="footer-link" href=""
-              ><ion-icon class="social-icon" name="logo-snapchat"></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a class="footer-link" href=""
-              ><ion-icon class="social-icon" name="logo-tiktok"></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a class="footer-link" href=""
-              ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
-            ></a>
-          </li>
-        </ul>
-
-        <p class="copyright">
-          Copyright &copy; <span class="year">2022</span> by Etzelaire Inc.
-          All rights reserved.
-        </p>
-      </div>
-      <div class="address-col">
-        <p class="footer-heading">Contact Me</p>
-        <address class="contacts">
-            <a class="footer-link"
-            title="Send e-mail" href="mailto:etzelaire@gmail.com"
-              >etzelaire@gmail.com</a>
-        </address>
-      </div>
-
-      <nav class="nav-col">
-        <p class="footer-heading">Newsletter</p>
-        <ul class="footer-nav">
-          <li><a class="footer-link" href="#">Sign Up</a></li>
-          <li><a class="footer-link" href="#">Sign in</a></li> 
-
-        </ul>
-      </nav>  
-
-      <nav class="nav-col">
-        <p class="footer-heading">About Me</p>
-        <ul class="footer-nav">
-          <li><a class="footer-link" href="about.html">Who am I?</a></li>
-          <li><a class="footer-link" href="https://linktr.ee/jordivargashere">LinkTree</a></li> 
-
-        </ul>
-      </nav>
-
-      <nav class="nav-col">
-        <p class="footer-heading">Resources</p>
-        <ul class="footer-nav">
-          <li><a class="footer-link" href="q&a.html">Q&A Section</a></li>
-
-          <li>
-            <a class="footer-link" href="privacy.html">Privacy & terms</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    
-  </footer>
-
-
+            </div>
+            <h5 class="features__header">Kingdom Center Tower</h5>
+            <p>
+              The tower bridge offers fantastic views of the entire city of Riyadh.
+            </p>
+          </div>
+          <img
+            src="img/gallery/kingdom-centre-tower.jpg"
+            data-src="img/grow.jpg"
+            alt="Plant"
+            class="features__img"
+          />
   
-  <div class="overlay hidden"></div>
-</body>
+          <img
+            src="img/gallery/mecca.jpg"
+            data-src="img/card.jpg"
+            alt="mecca"
+            class="features__img"
+          />
+          <div class="features__feature">
+            <div class="features__icon">
+              <img
+            src="img/icons/location.png"
+            data-src="img/grow.jpg"
+            alt="Plant"
+            class="features__img"
+          />
+            </div>
+            <h5 class="features__header">Mecca</h5>
+            <p>
+              Great Mosque of Mecca.
+            </p>
+          </div>
+          <div class="features__feature">
+            <div class="features__icon">
+              <img
+            src="img/icons/location.png"
+            data-src="img/grow.jpg"
+            alt="Plant"
+            class="features__img"
+          />
+            </div>
+            <h5 class="features__header">Al'Ula</h5>
+            <p>
+              The stunning area in the kingdom's northwest is scattered with golden rock formations, lush citrus farms and the remains of several ancient kingdoms. 
+            </p>
+          </div>
+          <img
+            src="img/gallery/alula.jpg"
+            data-src="img/grow.jpg"
+            alt="Plant"
+            class="features__img"
+          />
+        </div>
+        </div>
+      </section>
+
+      <section class="section" id="section2">
+        <div class="container grid grid--2cols grid--center-v">
+          <div class="step-textbox">
+            <p class="step-number">02</p>
+            <h3 class="heading3">How is the process to get established?</h3>
+            <p class="hero-description">1. Establish a commercial relationship with a Saudi company.</p>
+          <p class="hero-description">2. Your employer will guide you threw the steps to acquire the documentation needed for your trip.</p>
+          <!-- <p class="hero-description">3. Once in the kingdom </p>
+          <p class="hero-description">4. Suggestions to the player if any section of the video could be improved.</p>
+          <aside class="plan-details">
+            While we await for your payment to come through we already start the project.        
+          </aside> -->
+
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">Saudi is filled with interesting experiences and welcoming people</h2>
+          <div class="logos">
+            <img src="/img/logos/Saudi-Aramco-Logo.png" alt="Saudi ARAMCO" />
+            <img
+              src="/img/logos/saudiflag.png"
+              alt="Saudi Flag"
+            />
+            <img
+              src="/img/logos/carefoursaudi.png"
+              alt="Carefour Saudi Logo"
+            />
+            <img src="/img/logos/tamimilogo.jpg" alt="Tamimi logo" />
+            <img src="/img/logos/saudiarabiafutbol.png" alt="Saudi Futbol Selection logo" />
+            <img src="/img/logos/sauditourism.png" alt="Saudi Tourism logo" />
+          </div>
+        </div>
+      </section>
+      <section class="section" id="section3">
+        <div class="container grid grid--2cols grid--center-v">
+          <div class="step-textbox">
+            <p class="step-number">03</p>
+            <h3 class="heading3">Life in Compounds</h3>
+            <p class="step-description">
+             A westernized village in steroids.
+            </p>
+          </div>
+          <div class="btn-redirect">
+            <a href="form.html" class="btn btn--full">Newsletter</a>
+          </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- <section class="section" id="pricing">
+      <div class="container">
+        
+        <span class="subheading">Pricing</span>
+        <h2 class="heading2">
+          You bring the TALENT and we make it SHINE!
+        </h2>
+      </div>
+
+      <div class="container grid grid--2-cols margin-bottom-md">
+        <div class="pricing-plan pricing-plan--starter">
+          <header class="plan-header">
+            <p class="plan-name">Starter</p>
+            <p class="plan-price"><span>150</span>€</p>
+            <p class="plan-text">Get your video done in 30 days!</p>
+          </header>
+          <ul class="list">
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span>10 minutes of video</span>
+            </li>
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span>Initial feedback</span>
+            </li>
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span>Delivery through e-mail</span>
+            </li>
+            <li class="list-item">
+              <ion-icon class="list-icon" name="close-outline"></ion-icon>
+            </li>
+          </ul>
+          <div class="plan-sing-up">
+            <a href="form.html" target="blank" class="btn btn--full">Get your video now</a>
+          </div>
+        </div>
+
+        <div class="pricing-plan pricing-plan--complete">
+          <header class="plan-header">
+            <p class="plan-name">Premium</p>
+            <p class="plan-price"><span>200</span>€</p>
+            <p class="plan-text">Get your video in JUST 15 days!</p>
+          </header>
+          <ul class="list">
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span><strong>Premium</strong> effects</span>
+            </li>
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span>Premium<strong> assistance</strong></span>
+            </li>
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span>Delivery through e-mail</span>
+            </li>
+            <li class="list-item">
+              <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+              <span>Post editing changes</span>
+            </li>
+          </ul>
+          <div class="plan-sing-up">
+            <a href="form.html" class="btn btn--full">Get your video now</a>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="container grid">
+        <aside class="plan-details">
+          Prices include all applicable taxes. You can cancel in the first 72 natural hours.          
+        </aside>
+      </div>
+      </div>
+    </section> -->
+<!-- 
+    <section class="section" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Not sure yet?</h2>
+        <h3 class="section__header">
+          Hundreds of players are making their application way easier.
+        </h3>
+      </div>
+    <div class="slider">
+      <div class="slide" style="transform: translateX(-200%);">
+        <div class="testimonial">
+          <h5 class="testimonial__header">Best financial decision ever!</h5>
+          <blockquote class="testimonial__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Accusantium quas quisquam non? Quas voluptate nulla minima
+            deleniti optio ullam nesciunt, numquam corporis et asperiores
+            laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+            id alias reiciendis, perferendis facere pariatur dolore veniam
+            autem esse non voluptatem saepe provident nihil molestiae.
+          </blockquote>
+          <address class="testimonial__author">
+            <img src="img/icons/tennisball.svg" alt="" class="testimonial__photo" />
+            <h6 class="testimonial__name">Marcel Campó</h6>
+            <p class="testimonial__location">Barcelona, Spain</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="slide" style="transform: translateX(-100%);">
+        <div class="testimonial">
+          <h5 class="testimonial__header">
+            The last step to becoming a complete your US University application
+          </h5>
+          <blockquote class="testimonial__text">
+            Quisquam itaque deserunt ullam, quia ea repellendus provident,
+            ducimus neque ipsam modi voluptatibus doloremque, corrupti
+            laborum. Incidunt numquam perferendis veritatis neque repellendus.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+            deserunt exercitationem deleniti.
+          </blockquote>
+          <address class="testimonial__author">
+            <img src="img/blockchain.png" alt="" class="testimonial__photo" />
+            <h6 class="testimonial__name">Miyah Miles</h6>
+            <p class="testimonial__location">London, UK</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="slide" style="transform: translateX(0%)">
+        <div class="testimonial">
+          <h5 class="testimonial__header">
+            Experience a seamlessly built process to deliver 
+          </h5>
+          <blockquote class="testimonial__text">
+            Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+            incidunt commodi architecto numquam omnis nulla autem,
+            necessitatibus blanditiis modi similique quidem. Odio aliquam
+            culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+            deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+            alias reiciendis, perferendis facere.
+          </blockquote>
+          <address class="testimonial__author">
+            <img src="img/bitcoin.jpg" alt="" class="testimonial__photo" />
+            <h6 class="testimonial__name">Francisco Gomes</h6>
+            <p class="testimonial__location">Lisbon, Portugal</p>
+          </address>
+        </div>
+      </div>
+
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots">
+        
+      </div>
+      
+    </div>
+  </section> -->
+
+    <!-- <section class="section section--sign-up">
+      <div class="section__title">
+        <h3 class="section__header">
+          Care to receive the latest news? Sign up to the newsletter!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Sign Up</button>
+    </section> -->
+    
+
+    <!-- BACK TO TOP -->
+    <script> configObj = {"buttonD":"M8 18.568L10.8 21.333 16 16.198 21.2 21.333 24 18.568 16 10.667z","buttonT":"translate(-1148 -172) translate(832 140) translate(32 32) translate(284)","shadowSize":"none","roundnessSize":"12px","buttonDToBottom":"32px","buttonDToRight":"32px","selectedBackgroundColor":"#afdb0e","selectedIconColor":"rgb(16, 19, 24)","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};function createButton(obj, pageSimulator) {    const body = document.querySelector("body");    backToTopButton = document.createElement("span");    backToTopButton.classList.add("softr-back-to-top-button");    backToTopButton.id = "softr-back-to-top-button";    pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);    backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;    backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;    backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;    backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;    pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";    backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";    backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer";    backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";    backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });</script>
+  
+
+    <footer class="footer" id="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              class="footer-logo"
+              alt="Etzelaire logo"
+              src="/img/lazybunnynft-modified.png"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="https://www.instagram.com/jordivargasthere/" target="blank"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="https://www.youtube.com/channel/UCeyST3jdbEQSROir8xMJZ2A" target="blank"
+                ><ion-icon class="social-icon" name="logo-youtube"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-snapchat"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href=""
+                ><ion-icon class="social-icon" name="logo-tiktok"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2022</span> by Etzelaire Inc.
+            All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Me</p>
+          <address class="contacts">
+              <a class="footer-link" href="mailto:etzelaire@gmail.com"
+                >etzelaire@gmail.com</a>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Newsletter</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li> 
+            <!-- <li><a class="footer-link" href="#">iOS app</a></li>  -->
+            <!-- <li><a class="footer-link" href="#">Android app</a></li>  -->
+          </ul>
+        </nav>  
+
+        <nav class="nav-col">
+          <p class="footer-heading">About Me</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="about.html">Who am I?</a></li>
+            <!-- <li><a class="footer-link" href="services.html">Services</a></li>  -->
+             <!-- <li><a class="footer-link" href="careers.html">Work with us?</a></li>  -->
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="q&a.html">Q&A Section</a></li>
+            <li><a class="footer-link" href="#">Sites of Interest</a></li>
+            <li>
+              <a class="footer-link" href="privacy.html">Privacy & terms</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+    </footer>
+
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Get started <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn btn-modal btn-full" id="btn-modal">
+          Done!
+        </button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
 </html>
 
