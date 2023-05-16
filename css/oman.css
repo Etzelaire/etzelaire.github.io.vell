@@ -9,3 +9,10 @@
     background-position: 50% 0;
     
 }
+
+.oman-intro p{
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+    line-height: 2;
+    text-align: justify;
+}
