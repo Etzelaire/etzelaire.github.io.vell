@@ -18,7 +18,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #52c7aa;
+  background: #4bbb7d;
   scroll-behavior: smooth;
 }
 /*
@@ -81,6 +81,14 @@ p {
   line-height: 2;
   font-weight: 400;
   padding: 5rem;
+  text-align: justify;
+}
+
+.about-p{
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 2rem;
   text-align: justify;
 }
 /*/////////////////HEADER///////////////*/
@@ -192,7 +200,7 @@ strong {
 
 .btn:hover,
 .btn:active {
-  color: aliceblue;
+  color: #f0f8ff;
   transition: 0.6s;
   background-color: #37383d;
 }

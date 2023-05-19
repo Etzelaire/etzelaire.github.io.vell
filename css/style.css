@@ -95,8 +95,13 @@
 }
 /*HERO SECTION */
 .section-hero {
-  background-color: rgb(197, 230, 225);
+  /* background-color: rgb(197, 230, 225); */
+  background-image: url("../img/Myself/pdcpointview.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 4.8rem 0 9.6rem 0;
+ 
 }
 
 .hero {
