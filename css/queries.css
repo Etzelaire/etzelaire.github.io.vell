@@ -359,3 +359,22 @@
     }
   }
 }
+
+
+
+
+@media (min-width: 768px) {
+  .main-nav {
+      position: static;
+      display: flex;
+      background-color: transparent;
+  }
+
+  .main-nav-list li {
+      border: none;
+  }
+
+  .btn-mobile-nav {
+      display: none;
+  }
+}
