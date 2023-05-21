@@ -96,6 +96,7 @@
     margin-top: 1.2rem;
   }
 
+
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
@@ -205,6 +206,30 @@
   .grid--4-cols {
     grid-template-columns: 1fr;
   }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .features{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+.features__feature{
+  display: flex;
+  flex-direction: column;
+
+}
+
+ .features img{
+  width: 200px;
+  height: 200px;
+  
+ }
 
   .btn,
   .btn:link,
