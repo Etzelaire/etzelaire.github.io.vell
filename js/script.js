@@ -21,11 +21,11 @@ console.log("Copyright protected site?");
 yearEl.textContent = currentYear;
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
+// const btnNavEl = document.querySelector(".btn-mobile-nav");
+// const headerEl = document.querySelector(".header");
+// btnNavEl.addEventListener("click", function () {
+//   headerEl.classList.toggle("nav-open");
+// });
 
 ///////////////////////////////////////////////////////////
 //BUTTON SCROLLING
@@ -61,6 +61,7 @@ btnScrollTo1.addEventListener("click", function (e) {
   section1.scrollIntoView({ behavior: "smooth" });
 });
 //////////////////////////
+//BACK TO TOP BUTTON//
 document.addEventListener('DOMContentLoaded', (event) => {
   //Get the button
   var mybutton = document.getElementById("back-to-top-btn");
@@ -86,18 +87,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 ///////////////////////////////////////////////////////////
-// PAGE NAVIGATION
-// document
-//   .querySelector(".main-nav-list")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
 
-//     // Matching strategy
-//     if (e.target.classList.contains("main-nav-list")) {
-//       const id = e.target.getAttribute("href");
-//       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-//     }
-//   });
 ///////////////////////////////////////
 // Menu fade animation
 const handleHover = function (e) {
@@ -119,25 +109,30 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 ////////////////////////////////////////
 //Sticky navigation: Intersection Observer API
+document.addEventListener('DOMContentLoaded', (event) => {
+  var header = document.getElementById('header');
+  var sticky = header.offsetTop;
+  var btn = document.querySelector(".back-to-top");
 
-const header = document.querySelector(".header");
-const navHeight = nav.getBoundingClientRect().height;
+  window.onscroll = function() {scrollFunction()};
 
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  // console.log(entry);
+  function scrollFunction() {
+      if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+          btn.style.display = "block"; // show the button when we start scrolling
+      } else {
+          header.classList.remove("sticky");
+          btn.style.display = "none"; // hide the button when we're at the top of the page
+      }
+  }
 
-  if (!entry.isIntersecting) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
+  // When the user clicks on the button, scroll to the top of the document
+  btn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 });
 
-headerObserver.observe(header);
+
 ///////////////////////////////////////////////////////////
 // Reveal sections
 const allSections = document.querySelectorAll(".section");
@@ -162,31 +157,32 @@ allSections.forEach(function (section) {
 });
 
 // Lazy loading images
-const imgTargets = document.querySelectorAll("img[data-src]");
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
 
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
+  if ("IntersectionObserver" in window) {
+      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                  let lazyImage = entry.target;
+                  lazyImage.src = lazyImage.dataset.src;
+                  lazyImage.classList.remove("lazyload");
+                  lazyImageObserver.unobserve(lazyImage);
+              }
+          });
+      });
 
-  if (!entry.isIntersecting) return;
-
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("lazy-img");
-  });
-
-  observer.unobserve(entry.target);
-};
-
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: "200px",
+      lazyImages.forEach(function(lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+      });
+  } else {
+      // Fallback for browsers that do not support IntersectionObserver
+      lazyImages.forEach(function(lazyImage) {
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazyload");
+      });
+  }
 });
-
-imgTargets.forEach((img) => imgObserver.observe(img));
-
 ///////////////////////////////////////
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions/////
@@ -232,10 +228,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
       // If the screen size is 768px or larger
       if (window.innerWidth >= 768) {
           // Reset everything to the default state
-          hamburger.style.display = "block";
-          close.style.display = "none";
-          nav.style.display = "none";
+          hamburger.style.display = "";
+          close.style.display = "";
+          nav.style.display = "";
       }
   });
 });
+
 

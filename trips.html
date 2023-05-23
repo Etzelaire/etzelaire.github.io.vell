@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
     <!-- PURE COOKIE STYLESHEET -->
-    <link rel="stylesheet" href="css/purecookie.css" />
+    <link rel="stylesheet" href="css/purecookie.css"/>
 
     <script
       type="module"
@@ -39,7 +39,7 @@
     ></script>
     <script defer src="js/script.js"></script>
 
-    <title>jordivargashere | A travel vlog</title>
+    <title>jordivargashere  | Vlog de Viaje</title>
   </head>
 
   <!-- START OF   -->
@@ -78,19 +78,20 @@
       </button>
     </header>
 
+
+<main>
     <section class="section" id="section1">
         <div class="section__title">
-          <h2 class="section__description">Trip List</h2>
+          <h2 class="section__description">Mis Viajes</h2>
           
         </div>
   
         <div class="features">
           <img
-            src="img/gallery/praguesquare.JPG"
-            data-src=".../img/digital.jpg"
-            alt="Computer"
-            class="features__img "
-          />
+        src="img/gallery/pragueclock.JPG"
+        alt="Prague"
+        class="features__img "
+    />
            <div class="features__feature">
              <div class="features__icon">
               <svg>
@@ -117,18 +118,16 @@
             </p>
           </div>
           <img
-            src="img/gallery/muscat.png"
-            data-src="img/grow.jpg"
-            alt="Plant"
-            class="features__img "
-          />
+        src="img/oman/grandmosque.jpeg"
+        alt="Muscat"
+        class="features__img "
+    />
   
           <img
-            src="img/gallery/dubailandscape.jpeg"
-            data-src="img/card.jpg"
-            alt="Credit card"
-            class="features__img "
-          />
+        src="img/gallery/dubailandscape.jpeg"
+        alt="dubai"
+        class="features__img lazyload"
+    />
           <div class="features__feature">
             <div class="features__icon">
               <svg>
@@ -156,18 +155,16 @@
             </p>
           </div>
           <img
-            src="img/gallery/abudhabitowers.jpeg"
-            data-src="img/grow.jpg"
-            alt="Plant"
-            class="features__img "
-          />
+        src="img/gallery/abudhabitowers.jpeg"
+        alt="Plant"
+        class="features__img lazyload"
+    />
   
           <img
-            src="img/gallery/bahrainmarina.jpeg"
-            data-src="img/card.jpg"
-            alt="Credit card"
-            class="features__img "
-          />
+        src="img/gallery/bahrainmarina.jpeg"
+        alt="bahrein marina"
+        class="features__img lazyload"
+    />
           <div class="features__feature">
             <div class="features__icon">
               <svg>
@@ -194,11 +191,17 @@
         </div>
         <p>and the paragraph</p>       
       </section>
-  </body>
-<!-- BACK TO TOP -->
-<script> configObj = {"buttonD":"M8 18.568L10.8 21.333 16 16.198 21.2 21.333 24 18.568 16 10.667z","buttonT":"translate(-1148 -172) translate(832 140) translate(32 32) translate(284)","shadowSize":"none","roundnessSize":"12px","buttonDToBottom":"32px","buttonDToRight":"32px","selectedBackgroundColor":"#afdb0e","selectedIconColor":"rgb(16, 19, 24)","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};function createButton(obj, pageSimulator) {    const body = document.querySelector("body");    backToTopButton = document.createElement("span");    backToTopButton.classList.add("softr-back-to-top-button");    backToTopButton.id = "softr-back-to-top-button";    pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);    backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;    backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;    backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;    backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;    pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";    backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";    backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer";    backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";    backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });</script>
   
+
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="back-to-top-btn" title="Go to top">Top</button>
+  
+
 </main>  
+
+
+
   <footer class="footer" id="footer">
     <div class="container grid grid--footer">
       <div class="logo-col">
@@ -283,11 +286,11 @@
       </nav>
     </div>
     
-  </footer>
+    </footer>
 
 
   
-  <div class="overlay hidden"></div>
-</body>
+    <div class="overlay hidden"></div>
+  </body>
 </html>
 

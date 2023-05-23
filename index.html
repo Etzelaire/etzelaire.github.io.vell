@@ -66,7 +66,14 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="index.html">Home</a></li>
-          <li><a class="main-nav-link" href="trips.html">Viajes</a></li>
+          <li class="dropdown">
+            <a class="main-nav-link" href="trips.html">Viajes</a>
+            <ul class="submenu">
+              <li><a href="oman.html">Oman</a></li>
+              <li><a href="dubai.html">Dubai</a></li>
+              <li><a href="bahrein.html">Bahrein</a></li>
+            </ul>
+          </li>        
           <li><a class="main-nav-link" href="saudi.html">Saudi</a></li>
           <li><a class="main-nav-link" href="Oman.html">Oman</a></li>
           <li><a class="main-nav-link" href="about.html">Sobre Mí</a></li>
@@ -136,8 +143,8 @@
 
           <div class="step-img-box">
             <img
-              src="img/gallery/goprohero8black.jpg"
-              class="step-img"
+              data-src="img/gallery/goprohero8black.jpg"
+              class="step-img lazyload"
               alt="gopro hero 8 black action camera"
             />
           </div>
@@ -145,8 +152,8 @@
           <!-- STEP 02 -->
           <div class="step-img-box">
             <img
-              src="img/gallery/canoneosm5.jpg"
-              class="step-img"
+              data-src="img/gallery/canoneosm5.jpg"
+              class="step-img lazyload"
               alt="Cámara Canon EOS M5"
             />
           </div>
@@ -176,8 +183,8 @@
           <!-- STEP 04 -->
           <div class="step-img-box">
             <img
-              src="img/gallery/logitechc920.jpg"
-              class="step-img"
+              data-src="img/gallery/logitechc920.jpg"
+              class="step-img lazyload"
               alt="Cámara para stream logitech c920"
             />
           </div>
@@ -199,8 +206,8 @@
           </div>
           <div class="step-img-box">
             <img
-              src="img/gallery/asus tuf.png"
-              class="step-img"
+              data-src="img/gallery/asus tuf.png"
+              class="step-img lazyload"
               alt="Asus TUF Gaming A15"
             />
           </div>
@@ -211,12 +218,14 @@
         
 
     
-    
-      <button onclick="topFunction()" id="back-to-top-btn" title="Go to top">Top</button>
-      <div style="height:20px"></div> <!-- This is just to make the page scroll -->
+      <button class="back-to-top" id="back-to-top-btn" title="Go to top">Top</button>
+
+      
     
   
   </main>  
+
+  
     <footer class="footer" id="footer">
       <div class="container grid grid--footer">
         <div class="logo-col">
@@ -281,7 +290,7 @@
         </nav>  
 
         <nav class="nav-col">
-          <p class="footer-heading">About Me</p>
+          <p class="footer-heading">Sobre mí</p>
           <ul class="footer-nav">
             <li><a class="footer-link" href="about.html">Who am I?</a></li>
             <li><a class="footer-link" href="https://linktr.ee/jordivargashere">LinkTree</a></li> 
