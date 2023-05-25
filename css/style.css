@@ -57,14 +57,6 @@
 /***DROPDOWN SUBMENU***/
 
 
-.header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-}
-
 .logo {
   height: 50px;
 }
