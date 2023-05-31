@@ -128,9 +128,18 @@
 
 
   /* MOBILE NAVIGATION */
+  .header {
+    padding: 0;
+  } 
+
+  .logo{
+    margin-left: 40%;
+  }
+
   .btn-mobile-nav {
     display: block;
     z-index: 99;
+    margin-right: 10%;
   }
 
   .nav {
