@@ -167,8 +167,9 @@
 }
 /*HERO SECTION */
 .section-hero {
-  /* background-color: rgb(197, 230, 225); */
   background-image: url("../img/Myself/pdcpointview.jpeg");
+  background-color: rgb(197, 230, 225, 0.2);
+  background-blend-mode: lighten;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -364,12 +365,12 @@
 }
 /*SECTION1-form*/
 .section1-form {
-  background-image: url("/img/gallery/pexels-gonzalo-facello-1432034.jpg");
+  background-image: url("/img/Myself/comapedrosacim.jpeg");
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
-
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   padding: 15rem 3rem;
   border-top: 1px solid rgb(209, 180, 180);
   transition: transform 1s, opacity 1s;

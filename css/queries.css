@@ -27,7 +27,6 @@
   }
 
   
-
   .heading2 {
     font-size: 3.6rem;
   }
@@ -168,7 +167,6 @@
     pointer-events:auto;
     visibility: visible;
     transform: translateX(0);
-    
   }
 
   .nav-open .icon-mobile-nav[name="close-outline"] {
@@ -280,21 +278,30 @@
 .features__feature{
   display: flex;
   flex-direction: column;
-
 }
 
-.hero-p{
-  background-color: aliceblue;
-  opacity: 0.7;
+#herop{
   margin-bottom: 2rem;
   margin-top: 2rem;
-  
+  border-radius: 11px;
+  background-color: rgb(197, 230, 225, 0.7);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.5);
 }
+
+/* .section-hero {
+  background-image: url("../img/Myself/pdcpointview.jpeg");
+  background-color: rgb(197, 230, 225);
+  background-blend-mode: lighten;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4.8rem 0 9.6rem 0;
+ 
+} */
 
  .features img{
   width: 200px;
-  height: 200px;
-  
+  height: 200px;  
  }
 
   .btn,
