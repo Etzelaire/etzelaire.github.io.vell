@@ -84,46 +84,36 @@
 
     <main>
       
-      <section class="section-hero" id="section-hero">
+      <section id="section-hero">
         <div class="hero oman-back">
           <div class="hero-textbox">
             <h1 class="heading1">¿Qué saber antes de ir a Omán de vacaciones?</h1>
             <p class="hero-description">
               Echa un vistazo al visado, principales atracciones, divisa y cultura.
             </p>
+            
             <div class="hero-buttons">
-            <button class="btn btn--scroll-to-1">Ir a la intro</button>
-            <button class="btn btn--scroll-to">
-              Ver más información  &DownArrow;
-            </button>
-            </div>
-          
-          <div class="hero">
+              <button class="btn btn--scroll-to-1">Ir a la intro</button>
+              <button class="btn btn--scroll-to">
+                Ver más información  &DownArrow;
+              </button>
+              </div>
+              
+          <div class="hero" id="oman-hero">
             <h3 class="heading3">El Visado</h3>
             <p>Para entrar en Omán se requiere de visado, a menos que el turista provenga de uno de los países exemptos de este. Como los países dentro del Consejo de Cooperación para los Estados Árabes del Golfo (CCEAG).</p>
-            <ul>
+            <ul class="oman-ul">
               <li>Baréin</li>
               <li>Kuwait</li>
               <li>Arabia Saudita</li>
               <li>Emiratos Árabes Unidos</li>
               <li>Catar</li>
             </ul>
-            <p>Los ciudadanos de </p>
+            
           </div>
         
         </div>
-        <!-- <div class="hero-img-box">
-          <picture>
-            <source src="/img/lazybunnynft-modified" type="image/webp" />
-            <source src="/img/lazybunnynft-modified" type="image/png" />
-
-            <img
-              src="img/gallery/pexels-bogdan-glisik-1405355.jpg"
-              class="hero-img"
-              alt="Awesome image of a random guy playing tennis"
-            />
-          </picture>
-        </div> -->
+        
       </div>
       </section>
      
@@ -137,7 +127,9 @@
         <p>Omán es una tierra de contrastes. Lo que más me gustó fue recorrer las carreteras tan bien cuidadas (¡y llenas de radares!) mirando por la ventana y parando ocasionalmente para hacer las fotografías pertinentes a los distintos lugares. Te encuentras en Muscat rodeado de montañitas de roca puntiaguda y después de manejar durante media horita el paisaje cambia a montañas más grandes de arena y roca lisa. De vez en cuando pasas por delante de pueblitos escondidos enmedio de las montañas con sus pertinentes "wadis", pequeños riachuelos a veces con balsas de agua  o presas que los locales utilizan para pasar sus ratos libres. </p>
           </div>
 
-        <div class="features">
+        <div class="features" id="oman-features">
+
+          <div class="omanwrap">
           <img
             src="img/oman/grandmosque.jpeg"
             data-src="img/digital.jpg"
@@ -145,14 +137,8 @@
             class="features__img"
           />
           <div class="features__feature">
-            <div class="features__icon">
-              <img
-            src="img/icons/location.png"
-            data-src="img/grow.jpg"
-            alt="Plant"
-            class="features__img"
-          />
-            </div>
+            
+            
             <h5 class="features__header">Gran Mezquita del Sultán Qaboos</h5>
             <p>
               Esta mezquita se compone de un jardín que se extiende alrededor de ella y varios aparcaderos enmedio de este. En el perímetro exterior de la mezquita se encuentra la primera entrada que da al patio interior con una fuente, la sala donde se puede arrendar el tour en diferentes idiomas y la zona de souvenirs. Pasado el patio llegamos a la entrada hay un ropero donde dejar los zapatos antes de pasar dentro de la mezquita. 
@@ -161,16 +147,12 @@
               
             </p>
           </div>
-  
+          </div>
+          
+
+          <div class="omanwrap">
           <div class="features__feature">
-            <div class="features__icon">
-              <img
-            src="img/icons/location.png"
-            data-src="img/grow.jpg"
-            alt="Plant"
-            class="features__img"
-          />
-            </div>
+            
             <h5 class="features__header">Bahía de Muscat</h5>
             <p>
               La bahía de Muscat en la zona de Mutrah, muy cerca del souq y del hotel donde nos hospedamos.
@@ -182,7 +164,9 @@
             alt="Plant"
             class="features__img"
           />
+          </div>
   
+          <div class="omanwrap">
           <img
             src="img/oman/bizma sinkhole.jpeg"
             data-src="img/card.jpg"
@@ -190,41 +174,31 @@
             class="features__img"
           />
           <div class="features__feature">
-            <div class="features__icon">
-              <img
-            src="img/icons/location.png"
-            data-src="img/grow.jpg"
-            alt="Plant"
-            class="features__img"
-          />
-            </div>
+            
             <h5 class="features__header">El cenote de Bizmah</h5>
             <p>
               En un pequeño pueblo llamado Bizmah hay un cenote de entrada gratuita, con lavabos públicos y adaptado para ser visitado. Bajas del auto en el aparcadero de justo en frente y bajas hasta la orilla por unas escaleras bien delineadas. El cenote en sí no tiene mucho por ofrecer, quizás con unas gafas acuáticas se ven peces por debajo.
             </p>
           </div>
-          <div class="features__feature">
-            <div class="features__icon">
-              <img
-            src="img/icons/location.png"
-            data-src="img/grow.jpg"
-            alt="Plant"
-            class="features__img"
-          />
-            </div>
+          </div>
+
+          <div class="omanwrap">
+          <div class="features__feature" id="feature3">
+            
             <h5 class="features__header">El Fuerte de Nizwa</h5>
             <p>
               En este pueblito había un fuerte enmedio rodeado de las casas de los pueblerinos, el souq y el área para los animales. Es un buen sitio para hacerse a la idea de como era el layout típico de la época. 
             </p>
           </div>
           <img
-            src="img/oman/nizwa fort.jpeg"
+            src="img/oman/cosanizwa.jpeg"
             data-src="img/grow.jpg"
             alt="Plant"
             class="features__img"
           />
+          </div>
         </div>
-        </div>
+      </div>
       </section>
 
       <section class="section" id="how">
